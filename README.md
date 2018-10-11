@@ -22,7 +22,7 @@ Then, just use a `make`.
 
 The binary has lots of parameters, some being useless and some being cryptic. The main usages correspond to three published articles:
 
-* [1] Lineal semantics: 
+* [1] Linear semantics: 
 	* `./rantanplan -d domain.pddl -p problem.pddl -s output.plan -i c -m l`
 * [1] Exists-step semantics with a syntactic check for incompatibilities between actions:
 	* `./rantanplan -d domain.pddl -p problem.pddl -s output.plan -i o -t f`
