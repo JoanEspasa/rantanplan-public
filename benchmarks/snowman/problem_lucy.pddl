@@ -1,0 +1,203 @@
+;; Lucy
+;; ########
+;; #''''''#
+;; #'''''4#
+;; #''3'''#
+;; #''''q'#
+;; ########
+
+(define (problem problem_lucy)
+	(:domain 
+		snowman_domain
+	)
+	(:objects
+		p0_0 - posicio
+		p0_1 - posicio
+		p0_2 - posicio
+		p0_3 - posicio
+		p0_4 - posicio
+		p0_5 - posicio
+		p1_0 - posicio
+		p1_1 - posicio
+		p1_2 - posicio
+		p1_3 - posicio
+		p1_4 - posicio
+		p1_5 - posicio
+		p2_0 - posicio
+		p2_1 - posicio
+		p2_2 - posicio
+		p2_3 - posicio
+		p2_4 - posicio
+		p2_5 - posicio
+		p3_0 - posicio
+		p3_1 - posicio
+		p3_2 - posicio
+		p3_3 - posicio
+		p3_4 - posicio
+		p3_5 - posicio
+	)
+	(:init
+		(agent_at p3_4)
+		
+		(= (ball_at p0_0) 0)
+		(= (ball_at p0_1) 0)
+		(= (ball_at p0_2) 0)
+		(= (ball_at p0_3) 0)
+		(= (ball_at p0_4) 0)
+		(= (ball_at p0_5) 0)
+		(= (ball_at p1_0) 0)
+		(= (ball_at p1_1) 0)
+		(= (ball_at p1_2) 0)
+		(= (ball_at p1_3) 0)
+		(= (ball_at p1_4) 0)
+		(= (ball_at p1_5) 4)
+		(= (ball_at p2_0) 0)
+		(= (ball_at p2_1) 0)
+		(= (ball_at p2_2) 3)
+		(= (ball_at p2_3) 0)
+		(= (ball_at p2_4) 0)
+		(= (ball_at p2_5) 0)
+		(= (ball_at p3_0) 0)
+		(= (ball_at p3_1) 0)
+		(= (ball_at p3_2) 0)
+		(= (ball_at p3_3) 0)
+		(= (ball_at p3_4) 0)
+		(= (ball_at p3_5) 0)
+
+		(adjacent p0_0 p1_0)
+		(adjacent p0_0 p0_1)
+		(adjacent p0_1 p1_1)
+		(adjacent p0_1 p0_2)
+		(adjacent p0_1 p0_0)
+		(adjacent p0_2 p1_2)
+		(adjacent p0_2 p0_3)
+		(adjacent p0_2 p0_1)
+		(adjacent p0_3 p1_3)
+		(adjacent p0_3 p0_4)
+		(adjacent p0_3 p0_2)
+		(adjacent p0_4 p1_4)
+		(adjacent p0_4 p0_5)
+		(adjacent p0_4 p0_3)
+		(adjacent p0_5 p1_5)
+		(adjacent p0_5 p0_4)
+		(adjacent p1_0 p2_0)
+		(adjacent p1_0 p0_0)
+		(adjacent p1_0 p1_1)
+		(adjacent p1_1 p2_1)
+		(adjacent p1_1 p0_1)
+		(adjacent p1_1 p1_2)
+		(adjacent p1_1 p1_0)
+		(adjacent p1_2 p2_2)
+		(adjacent p1_2 p0_2)
+		(adjacent p1_2 p1_3)
+		(adjacent p1_2 p1_1)
+		(adjacent p1_3 p2_3)
+		(adjacent p1_3 p0_3)
+		(adjacent p1_3 p1_4)
+		(adjacent p1_3 p1_2)
+		(adjacent p1_4 p2_4)
+		(adjacent p1_4 p0_4)
+		(adjacent p1_4 p1_5)
+		(adjacent p1_4 p1_3)
+		(adjacent p1_5 p2_5)
+		(adjacent p1_5 p0_5)
+		(adjacent p1_5 p1_4)
+		(adjacent p2_0 p3_0)
+		(adjacent p2_0 p1_0)
+		(adjacent p2_0 p2_1)
+		(adjacent p2_1 p3_1)
+		(adjacent p2_1 p1_1)
+		(adjacent p2_1 p2_2)
+		(adjacent p2_1 p2_0)
+		(adjacent p2_2 p3_2)
+		(adjacent p2_2 p1_2)
+		(adjacent p2_2 p2_3)
+		(adjacent p2_2 p2_1)
+		(adjacent p2_3 p3_3)
+		(adjacent p2_3 p1_3)
+		(adjacent p2_3 p2_4)
+		(adjacent p2_3 p2_2)
+		(adjacent p2_4 p3_4)
+		(adjacent p2_4 p1_4)
+		(adjacent p2_4 p2_5)
+		(adjacent p2_4 p2_3)
+		(adjacent p2_5 p3_5)
+		(adjacent p2_5 p1_5)
+		(adjacent p2_5 p2_4)
+		(adjacent p3_0 p2_0)
+		(adjacent p3_0 p3_1)
+		(adjacent p3_1 p2_1)
+		(adjacent p3_1 p3_2)
+		(adjacent p3_1 p3_0)
+		(adjacent p3_2 p2_2)
+		(adjacent p3_2 p3_3)
+		(adjacent p3_2 p3_1)
+		(adjacent p3_3 p2_3)
+		(adjacent p3_3 p3_4)
+		(adjacent p3_3 p3_2)
+		(adjacent p3_4 p2_4)
+		(adjacent p3_4 p3_5)
+		(adjacent p3_4 p3_3)
+		(adjacent p3_5 p2_5)
+		(adjacent p3_5 p3_4)
+		(inline p0_0 p2_0)
+		(inline p0_0 p0_2)
+		(inline p0_1 p2_1)
+		(inline p0_1 p0_3)
+		(inline p0_2 p2_2)
+		(inline p0_2 p0_4)
+		(inline p0_2 p0_0)
+		(inline p0_3 p2_3)
+		(inline p0_3 p0_5)
+		(inline p0_3 p0_1)
+		(inline p0_4 p2_4)
+		(inline p0_4 p0_2)
+		(inline p0_5 p2_5)
+		(inline p0_5 p0_3)
+		(inline p1_0 p3_0)
+		(inline p1_0 p1_2)
+		(inline p1_1 p3_1)
+		(inline p1_1 p1_3)
+		(inline p1_2 p3_2)
+		(inline p1_2 p1_4)
+		(inline p1_2 p1_0)
+		(inline p1_3 p3_3)
+		(inline p1_3 p1_5)
+		(inline p1_3 p1_1)
+		(inline p1_4 p3_4)
+		(inline p1_4 p1_2)
+		(inline p1_5 p3_5)
+		(inline p1_5 p1_3)
+		(inline p2_0 p0_0)
+		(inline p2_0 p2_2)
+		(inline p2_1 p0_1)
+		(inline p2_1 p2_3)
+		(inline p2_2 p0_2)
+		(inline p2_2 p2_4)
+		(inline p2_2 p2_0)
+		(inline p2_3 p0_3)
+		(inline p2_3 p2_5)
+		(inline p2_3 p2_1)
+		(inline p2_4 p0_4)
+		(inline p2_4 p2_2)
+		(inline p2_5 p0_5)
+		(inline p2_5 p2_3)
+		(inline p3_0 p1_0)
+		(inline p3_0 p3_2)
+		(inline p3_1 p1_1)
+		(inline p3_1 p3_3)
+		(inline p3_2 p1_2)
+		(inline p3_2 p3_4)
+		(inline p3_2 p3_0)
+		(inline p3_3 p1_3)
+		(inline p3_3 p3_5)
+		(inline p3_3 p3_1)
+		(inline p3_4 p1_4)
+		(inline p3_4 p3_2)
+		(inline p3_5 p1_5)
+		(inline p3_5 p3_3)
+	)
+	(:goal 
+		(and (done))
+	)
+)

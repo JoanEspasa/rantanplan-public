@@ -1,0 +1,140 @@
+(define (problem DLOG_2_3_6)
+	(:domain driverlog)
+	(:objects
+	driver1 - driver
+	driver2 - driver
+	truck1 - truck
+	truck2 - truck
+	truck3 - truck
+	package1 - obj
+	package2 - obj
+	package3 - obj
+	package4 - obj
+	package5 - obj
+	package6 - obj
+	s0 - location
+	s1 - location
+	s2 - location
+	s3 - location
+	s4 - location
+	p0_1 - location
+	p1_2 - location
+	p1_3 - location
+	p3_2 - location
+	p3_4 - location
+	p4_0 - location
+	)
+	(:init
+	(at_ driver1 s4)
+	(at_ driver2 s1)
+	(at_ truck1 s2)
+	(empty truck1)
+	(at_ truck2 s0)
+	(empty truck2)
+	(at_ truck3 s3)
+	(empty truck3)
+	(at_ package1 s2)
+	(at_ package2 s1)
+	(at_ package3 s3)
+	(at_ package4 s0)
+	(at_ package5 s1)
+	(at_ package6 s1)
+	(path s0 p0_1)
+	(path p0_1 s0)
+	(path s1 p0_1)
+	(path p0_1 s1)
+	(= (time_to_walk s0 p0_1) 67)
+	(= (time_to_walk p0_1 s0) 67)
+	(= (time_to_walk s1 p0_1) 63)
+	(= (time_to_walk p0_1 s1) 63)
+	(path s1 p1_2)
+	(path p1_2 s1)
+	(path s2 p1_2)
+	(path p1_2 s2)
+	(= (time_to_walk s1 p1_2) 69)
+	(= (time_to_walk p1_2 s1) 69)
+	(= (time_to_walk s2 p1_2) 100)
+	(= (time_to_walk p1_2 s2) 100)
+	(path s1 p1_3)
+	(path p1_3 s1)
+	(path s3 p1_3)
+	(path p1_3 s3)
+	(= (time_to_walk s1 p1_3) 11)
+	(= (time_to_walk p1_3 s1) 11)
+	(= (time_to_walk s3 p1_3) 41)
+	(= (time_to_walk p1_3 s3) 41)
+	(path s3 p3_2)
+	(path p3_2 s3)
+	(path s2 p3_2)
+	(path p3_2 s2)
+	(= (time_to_walk s3 p3_2) 95)
+	(= (time_to_walk p3_2 s3) 95)
+	(= (time_to_walk s2 p3_2) 25)
+	(= (time_to_walk p3_2 s2) 25)
+	(path s3 p3_4)
+	(path p3_4 s3)
+	(path s4 p3_4)
+	(path p3_4 s4)
+	(= (time_to_walk s3 p3_4) 20)
+	(= (time_to_walk p3_4 s3) 20)
+	(= (time_to_walk s4 p3_4) 63)
+	(= (time_to_walk p3_4 s4) 63)
+	(path s4 p4_0)
+	(path p4_0 s4)
+	(path s0 p4_0)
+	(path p4_0 s0)
+	(= (time_to_walk s4 p4_0) 85)
+	(= (time_to_walk p4_0 s4) 85)
+	(= (time_to_walk s0 p4_0) 22)
+	(= (time_to_walk p4_0 s0) 22)
+	(link s0 s2)
+	(link s2 s0)
+	(= (time_to_drive s0 s2) 65)
+	(= (time_to_drive s2 s0) 65)
+	(link s0 s3)
+	(link s3 s0)
+	(= (time_to_drive s0 s3) 39)
+	(= (time_to_drive s3 s0) 39)
+	(link s1 s0)
+	(link s0 s1)
+	(= (time_to_drive s1 s0) 99)
+	(= (time_to_drive s0 s1) 99)
+	(link s2 s1)
+	(link s1 s2)
+	(= (time_to_drive s2 s1) 40)
+	(= (time_to_drive s1 s2) 40)
+	(link s3 s2)
+	(link s2 s3)
+	(= (time_to_drive s3 s2) 74)
+	(= (time_to_drive s2 s3) 74)
+	(link s4 s0)
+	(link s0 s4)
+	(= (time_to_drive s4 s0) 41)
+	(= (time_to_drive s0 s4) 41)
+	(link s4 s2)
+	(link s2 s4)
+	(= (time_to_drive s4 s2) 96)
+	(= (time_to_drive s2 s4) 96)
+	(link s4 s3)
+	(link s3 s4)
+	(= (time_to_drive s4 s3) 53)
+	(= (time_to_drive s3 s4) 53)
+	(= (driven) 0)
+	(= (walked) 0)
+)
+	(:goal (and
+	(at_ driver1 s3)
+	(at_ driver2 s4)
+	(at_ truck1 s3)
+	(at_ truck2 s3)
+	(at_ package1 s3)
+	(at_ package2 s2)
+	(at_ package3 s1)
+	(at_ package4 s0)
+	(at_ package5 s1)
+	(at_ package6 s1)
+	))
+
+;(:metric minimize (+ (+ (* 3  (total_time)) (* 4  (driven))) (* 3  (walked))))
+
+)

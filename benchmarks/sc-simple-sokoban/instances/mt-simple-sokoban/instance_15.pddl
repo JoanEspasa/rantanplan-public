@@ -1,0 +1,60 @@
+(define (problem instance_15)
+  (:domain mt-simple-sokoban)
+  (:objects
+    stone1 stone2 stone3 stone4 stone5 stone6 stone7 stone8 stone9 stone10 stone11 stone12 - stone
+	player1 - player
+  )
+
+  (:init
+    (= (max_x) 15)
+	(= (min_x) 1)
+	(= (max_y) 15)
+	(= (min_y) 1)
+	(= (x player1) 2)
+	(= (y player1) 7)
+	(= (x stone1) 2)
+	(= (y stone1) 2)
+	(= (x stone2) 2)
+	(= (y stone2) 3)
+	(= (x stone3) 2)
+	(= (y stone3) 4)
+	(= (x stone4) 2)
+	(= (y stone4) 5)
+	(= (x stone5) 2)
+	(= (y stone5) 6)
+	(= (x stone6) 2)
+	(= (y stone6) 8)
+	(= (x stone7) 2)
+	(= (y stone7) 9)
+	(= (x stone8) 2)
+	(= (y stone8) 10)
+	(= (x stone9) 2)
+	(= (y stone9) 11)
+	(= (x stone10) 2)
+	(= (y stone10) 12)
+	(= (x stone11) 2)
+	(= (y stone11) 13)
+	(= (x stone12) 2)
+	(= (y stone12) 14)
+  )
+
+  (:goal (and 
+    (or (and (= (x stone1) 1) (= (y stone1) 7)) (and (= (x stone1) 15) (= (y stone1) 3)) (and (= (x stone1) 15) (= (y stone1) 4)) (and (= (x stone1) 15) (= (y stone1) 5)) (and (= (x stone1) 15) (= (y stone1) 6)) (and (= (x stone1) 15) (= (y stone1) 8)) (and (= (x stone1) 15) (= (y stone1) 9)) (and (= (x stone1) 15) (= (y stone1) 10)) (and (= (x stone1) 15) (= (y stone1) 11)) (and (= (x stone1) 15) (= (y stone1) 12)) (and (= (x stone1) 15) (= (y stone1) 13)) (and (= (x stone1) 15) (= (y stone1) 14)))
+	(or (and (= (x stone2) 1) (= (y stone2) 7)) (and (= (x stone2) 15) (= (y stone2) 3)) (and (= (x stone2) 15) (= (y stone2) 4)) (and (= (x stone2) 15) (= (y stone2) 5)) (and (= (x stone2) 15) (= (y stone2) 6)) (and (= (x stone2) 15) (= (y stone2) 8)) (and (= (x stone2) 15) (= (y stone2) 9)) (and (= (x stone2) 15) (= (y stone2) 10)) (and (= (x stone2) 15) (= (y stone2) 11)) (and (= (x stone2) 15) (= (y stone2) 12)) (and (= (x stone2) 15) (= (y stone2) 13)) (and (= (x stone2) 15) (= (y stone2) 14)))
+	(or (and (= (x stone3) 1) (= (y stone3) 7)) (and (= (x stone3) 15) (= (y stone3) 3)) (and (= (x stone3) 15) (= (y stone3) 4)) (and (= (x stone3) 15) (= (y stone3) 5)) (and (= (x stone3) 15) (= (y stone3) 6)) (and (= (x stone3) 15) (= (y stone3) 8)) (and (= (x stone3) 15) (= (y stone3) 9)) (and (= (x stone3) 15) (= (y stone3) 10)) (and (= (x stone3) 15) (= (y stone3) 11)) (and (= (x stone3) 15) (= (y stone3) 12)) (and (= (x stone3) 15) (= (y stone3) 13)) (and (= (x stone3) 15) (= (y stone3) 14)))
+	(or (and (= (x stone4) 1) (= (y stone4) 7)) (and (= (x stone4) 15) (= (y stone4) 3)) (and (= (x stone4) 15) (= (y stone4) 4)) (and (= (x stone4) 15) (= (y stone4) 5)) (and (= (x stone4) 15) (= (y stone4) 6)) (and (= (x stone4) 15) (= (y stone4) 8)) (and (= (x stone4) 15) (= (y stone4) 9)) (and (= (x stone4) 15) (= (y stone4) 10)) (and (= (x stone4) 15) (= (y stone4) 11)) (and (= (x stone4) 15) (= (y stone4) 12)) (and (= (x stone4) 15) (= (y stone4) 13)) (and (= (x stone4) 15) (= (y stone4) 14)))
+	(or (and (= (x stone5) 1) (= (y stone5) 7)) (and (= (x stone5) 15) (= (y stone5) 3)) (and (= (x stone5) 15) (= (y stone5) 4)) (and (= (x stone5) 15) (= (y stone5) 5)) (and (= (x stone5) 15) (= (y stone5) 6)) (and (= (x stone5) 15) (= (y stone5) 8)) (and (= (x stone5) 15) (= (y stone5) 9)) (and (= (x stone5) 15) (= (y stone5) 10)) (and (= (x stone5) 15) (= (y stone5) 11)) (and (= (x stone5) 15) (= (y stone5) 12)) (and (= (x stone5) 15) (= (y stone5) 13)) (and (= (x stone5) 15) (= (y stone5) 14)))
+	(or (and (= (x stone6) 1) (= (y stone6) 7)) (and (= (x stone6) 15) (= (y stone6) 3)) (and (= (x stone6) 15) (= (y stone6) 4)) (and (= (x stone6) 15) (= (y stone6) 5)) (and (= (x stone6) 15) (= (y stone6) 6)) (and (= (x stone6) 15) (= (y stone6) 8)) (and (= (x stone6) 15) (= (y stone6) 9)) (and (= (x stone6) 15) (= (y stone6) 10)) (and (= (x stone6) 15) (= (y stone6) 11)) (and (= (x stone6) 15) (= (y stone6) 12)) (and (= (x stone6) 15) (= (y stone6) 13)) (and (= (x stone6) 15) (= (y stone6) 14)))
+	(or (and (= (x stone7) 1) (= (y stone7) 7)) (and (= (x stone7) 15) (= (y stone7) 3)) (and (= (x stone7) 15) (= (y stone7) 4)) (and (= (x stone7) 15) (= (y stone7) 5)) (and (= (x stone7) 15) (= (y stone7) 6)) (and (= (x stone7) 15) (= (y stone7) 8)) (and (= (x stone7) 15) (= (y stone7) 9)) (and (= (x stone7) 15) (= (y stone7) 10)) (and (= (x stone7) 15) (= (y stone7) 11)) (and (= (x stone7) 15) (= (y stone7) 12)) (and (= (x stone7) 15) (= (y stone7) 13)) (and (= (x stone7) 15) (= (y stone7) 14)))
+	(or (and (= (x stone8) 1) (= (y stone8) 7)) (and (= (x stone8) 15) (= (y stone8) 3)) (and (= (x stone8) 15) (= (y stone8) 4)) (and (= (x stone8) 15) (= (y stone8) 5)) (and (= (x stone8) 15) (= (y stone8) 6)) (and (= (x stone8) 15) (= (y stone8) 8)) (and (= (x stone8) 15) (= (y stone8) 9)) (and (= (x stone8) 15) (= (y stone8) 10)) (and (= (x stone8) 15) (= (y stone8) 11)) (and (= (x stone8) 15) (= (y stone8) 12)) (and (= (x stone8) 15) (= (y stone8) 13)) (and (= (x stone8) 15) (= (y stone8) 14)))
+	(or (and (= (x stone9) 1) (= (y stone9) 7)) (and (= (x stone9) 15) (= (y stone9) 3)) (and (= (x stone9) 15) (= (y stone9) 4)) (and (= (x stone9) 15) (= (y stone9) 5)) (and (= (x stone9) 15) (= (y stone9) 6)) (and (= (x stone9) 15) (= (y stone9) 8)) (and (= (x stone9) 15) (= (y stone9) 9)) (and (= (x stone9) 15) (= (y stone9) 10)) (and (= (x stone9) 15) (= (y stone9) 11)) (and (= (x stone9) 15) (= (y stone9) 12)) (and (= (x stone9) 15) (= (y stone9) 13)) (and (= (x stone9) 15) (= (y stone9) 14)))
+	(or (and (= (x stone10) 1) (= (y stone10) 7)) (and (= (x stone10) 15) (= (y stone10) 3)) (and (= (x stone10) 15) (= (y stone10) 4)) (and (= (x stone10) 15) (= (y stone10) 5)) (and (= (x stone10) 15) (= (y stone10) 6)) (and (= (x stone10) 15) (= (y stone10) 8)) (and (= (x stone10) 15) (= (y stone10) 9)) (and (= (x stone10) 15) (= (y stone10) 10)) (and (= (x stone10) 15) (= (y stone10) 11)) (and (= (x stone10) 15) (= (y stone10) 12)) (and (= (x stone10) 15) (= (y stone10) 13)) (and (= (x stone10) 15) (= (y stone10) 14)))
+	(or (and (= (x stone11) 1) (= (y stone11) 7)) (and (= (x stone11) 15) (= (y stone11) 3)) (and (= (x stone11) 15) (= (y stone11) 4)) (and (= (x stone11) 15) (= (y stone11) 5)) (and (= (x stone11) 15) (= (y stone11) 6)) (and (= (x stone11) 15) (= (y stone11) 8)) (and (= (x stone11) 15) (= (y stone11) 9)) (and (= (x stone11) 15) (= (y stone11) 10)) (and (= (x stone11) 15) (= (y stone11) 11)) (and (= (x stone11) 15) (= (y stone11) 12)) (and (= (x stone11) 15) (= (y stone11) 13)) (and (= (x stone11) 15) (= (y stone11) 14)))
+	(or (and (= (x stone12) 1) (= (y stone12) 7)) (and (= (x stone12) 15) (= (y stone12) 3)) (and (= (x stone12) 15) (= (y stone12) 4)) (and (= (x stone12) 15) (= (y stone12) 5)) (and (= (x stone12) 15) (= (y stone12) 6)) (and (= (x stone12) 15) (= (y stone12) 8)) (and (= (x stone12) 15) (= (y stone12) 9)) (and (= (x stone12) 15) (= (y stone12) 10)) (and (= (x stone12) 15) (= (y stone12) 11)) (and (= (x stone12) 15) (= (y stone12) 12)) (and (= (x stone12) 15) (= (y stone12) 13)) (and (= (x stone12) 15) (= (y stone12) 14)))
+  ))
+
+  
+  
+
+  
+)
